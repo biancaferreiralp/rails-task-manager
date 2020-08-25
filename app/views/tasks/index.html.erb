@@ -1,0 +1,15 @@
+<h1 class="m-3">Tasks</h1>
+
+<% @tasks.each do |task| %>
+  <% if task.completed == true %>
+    <div class="form-check ml-3">
+      <input type="checkbox" id="complete-task" class="form-check-input" checked>
+      <label for="complete-task" class="form-check-label"><p><%= "#{task.title}" %></p></label>
+    </div>
+  <% else %>
+    <div class="form-check ml-3">
+      <input type="checkbox" id="complete-task" class="form-check-input">
+      <label for="complete-task" class="form-check-label"><p><%= "#{task.title}" %></p></label>
+    </div>
+  <% end %>
+<% end %>
