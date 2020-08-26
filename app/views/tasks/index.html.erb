@@ -4,12 +4,12 @@
   <% if task.completed == true %>
     <div class="form-check ml-3">
       <input type="checkbox" id="complete-task" class="form-check-input" checked>
-      <label for="complete-task" class="form-check-label"><p><%= "#{task.title}" %></p></label>
+      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
     </div>
   <% else %>
     <div class="form-check ml-3">
       <input type="checkbox" id="complete-task" class="form-check-input">
-      <label for="complete-task" class="form-check-label"><p><%= "#{task.title}" %></p></label>
+      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
     </div>
   <% end %>
 <% end %>
