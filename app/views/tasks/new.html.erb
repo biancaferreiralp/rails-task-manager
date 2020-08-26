@@ -1,0 +1,12 @@
+<h2 class="task-title m-4"><%= "Add Task" %></h2>
+<div class="form">
+  <%= simple_form_for(@task) do |form| %>
+    <%= form.input :title %>
+    <%= form.input :details %>
+    <%= form.submit %>
+  <% end %>
+</div>
+
+<p class="line m-4"><%= "———————————————————————" %></p>
+
+<p class="btn btn-primary ml-3 mt-2"><%= link_to "Back", tasks_path %></p>

@@ -18,6 +18,13 @@
  @import "font-awesome";
 
  body {
+   a {
+     color: black;
+   }
+   a:hover {
+     text-decoration: none;
+     color: #0075FF;
+   }
    .btn a {
      text-decoration: none;
      color: white;
@@ -25,5 +32,12 @@
    .btn a:hover {
      text-decoration: none;
      color: white;
+   }
+   .line {
+     color: lightgrey;
+   }
+   .form {
+     width: 370px;
+     margin-left: 20px;
    }
  }

@@ -1,17 +1,19 @@
-<h3 class="task-title m-3"><%= @task.title %></h3>
+<h2 class="task-title m-4"><%= @task.title %></h2>
 
-<p class="task-details ml-3 mt-4"><%= @task.details %></p>
+<p class="task-details ml-4 mt-5"><%= @task.details %></p>
 
 <% if @task.completed == true %>
-  <div class="form-check ml-3 mt-4">
+  <div class="form-check ml-4 mt-4">
     <input type="checkbox" id="complete-task" class="form-check-input" checked disabled>
     <label for="complete-task" class="form-check-label"><p><%= "This task is completed!" %></p></label>
   </div>
 <% else %>
-  <div class="form-check ml-3 mt-4">
+  <div class="form-check ml-4 mt-4">
     <input type="checkbox" id="complete-task" class="form-check-input" disabled>
     <label for="complete-task" class="form-check-label"><p><%= "This task is not completed yet!" %></p></label>
   </div>
 <% end %>
+
+<p class="line m-4"><%= "———————————————————————" %></p>
 
 <p class="btn btn-primary ml-3 mt-2"><%= link_to "Back", tasks_path %></p>
