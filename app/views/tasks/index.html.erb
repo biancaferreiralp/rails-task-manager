@@ -4,12 +4,18 @@
   <% if task.completed == true %>
     <div class="form-check ml-4">
       <input type="checkbox" id="complete-task" class="form-check-input" checked disabled>
-      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
+      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %> · <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+      </p></label>
     </div>
   <% else %>
     <div class="form-check ml-4">
       <input type="checkbox" id="complete-task" class="form-check-input" disabled>
-      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
+      <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %> · <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+      </p></label>
     </div>
   <% end %>
 <% end %>
