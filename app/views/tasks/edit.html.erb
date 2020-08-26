@@ -1,8 +1,9 @@
-<h2 class="add-task m-4"><%= "Add Task" %></h2>
+<h2 class="edit-task m-4"><%= "Edit Task" %></h2>
 <div class="form">
   <%= simple_form_for(@task) do |form| %>
     <%= form.input :title %>
     <%= form.input :details %>
+    <%= form.input :completed %>
     <%= form.submit %>
   <% end %>
 </div>

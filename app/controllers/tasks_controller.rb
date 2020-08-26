@@ -20,9 +20,22 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find params[:id]
+  end
+
+  def update
+    @task = Task.find params[:id]
+    if @task.update(strong_params)
+      redirect_to task_path(@task.id)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def strong_params
-    return params.require(:task).permit(:title, :details)
+    return params.require(:task).permit(:title, :details, :completed)
   end
 end

@@ -3,12 +3,12 @@
 <% @tasks.each do |task| %>
   <% if task.completed == true %>
     <div class="form-check ml-4">
-      <input type="checkbox" id="complete-task" class="form-check-input" checked>
+      <input type="checkbox" id="complete-task" class="form-check-input" checked disabled>
       <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
     </div>
   <% else %>
     <div class="form-check ml-4">
-      <input type="checkbox" id="complete-task" class="form-check-input">
+      <input type="checkbox" id="complete-task" class="form-check-input" disabled>
       <label for="complete-task" class="form-check-label"><p><%= link_to task.title, task_path(task.id) %></p></label>
     </div>
   <% end %>
