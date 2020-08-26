@@ -23,7 +23,7 @@
    }
    a:hover {
      text-decoration: none;
-     color: #0075FF;
+     color: lightgrey;
    }
    .btn a {
      text-decoration: none;
@@ -33,6 +33,16 @@
      text-decoration: none;
      color: white;
    }
+   .btn-light {
+    background: transparent;
+    border: 1px solid lightgrey;
+  }
+   .btn-light a {
+     color: rgb(199, 199, 199);
+   }
+   .btn-light a:hover {
+    color: rgb(199, 199, 199);
+  }
    .line {
      color: lightgrey;
    }
